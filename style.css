@@ -1,0 +1,52 @@
+.populateContainer {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #0F4C75;
+    color: #DEEDF0;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0%) invert(80%);
+}
+
+.accordion-button:focus {
+    box-shadow: inherit;
+}
+
+.foot-div {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    padding-right: 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+
+}
+
+i {
+    padding: 1%;
+}
+
+#di {
+    margin-bottom: 35%;
+}
+
+#footer {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    margin-top: 100%;
+    width: 100%;
+    background-color: #121010;
+    height: 11%;
+    z-index: 100;
+
+}
