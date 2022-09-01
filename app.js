@@ -34,22 +34,23 @@ xhr.onload=function(){
 };
 xhr.send();
 
-// Searching a text
-
+// Searching a news : Using Regular Expression
 
 searchText.addEventListener('input', function(){
     let textToSearch=searchText.value;
+    const reg = new RegExp(textToSearch,'i');
     let newsCards= document.getElementsByClassName("accordion-item");
     let newsCardDescriptions = document.getElementsByClassName("accordion-body");
     Array.from(newsCards).forEach((element,index)=>{
         let description= newsCardDescriptions[index].innerText;
-        if(description.includes(textToSearch)){
+        if(reg.test(description)){
+            // console.log("inside true")
             element.style.display="block";
         }
         else{
             element.style.display="none";
         }
     });
-
+    
 });
 
